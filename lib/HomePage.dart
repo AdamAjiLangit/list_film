@@ -52,6 +52,7 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (BuildContext context, int index) {
                 return Card(
                   elevation: 4,
+                  color: Colors.black, // Set the background color to black
                   child: ListTile(
                     leading: Container(
                       width: 80,
@@ -69,16 +70,19 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
+                        color: Colors.white, // Set the text color to white
                       ),
                     ),
                     subtitle: Column(
-
                       children: [
                         SizedBox(height: 5,),
-                        Text("Tanggal Rilis : " + listfilm![index].tahunRilis),
-                        Text("Genre : " + listfilm![index].genre),
-                        Text("Durasi : " + listfilm![index].durasi),
-                        Text("Rating " + listfilm![index].rating),
+                        Text(
+                          "Tanggal Rilis : " + listfilm![index].tahunRilis +
+                              " | Genre : " + listfilm![index].genre +
+                              " | Durasi : " + listfilm![index].durasi +
+                              " | Rating " + listfilm![index].rating,
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ],
                     ),
                   ),
